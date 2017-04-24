@@ -153,6 +153,7 @@ func (app *App) Run() {
 	defer app.Screen.Fini()
 	app.populateArtists()
 	app.populatePlaylists()
+	app.dbusSetup()
 	// log.Printf("Artists done")
 	go app.player()
 	app.mainLoop()
